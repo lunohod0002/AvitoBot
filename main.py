@@ -20,6 +20,7 @@ client.stop()
 def all_messges(client:Client,mesage:Message):
     #mesage.reply(mesage.text,quote=True,reply_to_message_id=mesage.id)
     global phones
+    global fio,fio2,year2,year,birthd,model,model2
     count=+1
     if count % 2 == 0:
         print(mesage.text)
@@ -82,4 +83,10 @@ def all_messges(client:Client,mesage:Message):
                 phones =phones+ mesage[fisrt:last]+","
             print(phones)
 
+    if (fio==""):
+        fio=fio2
+    if (model==""):
+        model=model2
+    if (year==""):
+        year=year2
 client.run()
